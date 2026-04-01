@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Fahad Iftikhar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar--solid" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Fahad Iftikhar</a>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div style="height:var(--nav-height);"></div>
+
+    <!-- ABOUT -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Hardware engineer designing circuits from concept to copper.</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a hardware engineer with 3+ years of experience designing and validating PCBs for power electronics and embedded systems, using Altium Designer as my primary EDA tool.</p>
+                    <br>
+                    <p>I work across the full development cycle — from schematic capture and component selection through prototype bring-up, EMC pre-compliance testing, and DFM-aware layout. Comfortable in lab environments with oscilloscopes, signal analyzers, and power supplies.</p>
+                    <br>
+                    <p>Currently pursuing my MSc in Electromobility at FAU Erlangen-Nurnberg while working as an Electronic Hardware Designer at Acal BFi. I apply Python to test automation and data logging, and develop firmware in C/C++ for ESP32, STM32, and nRF52 platforms.</p>
+                </div>
+                <div class="about-properties">
+                    <div class="about-properties-header"><i class="fa-solid fa-sliders" style="margin-right:8px;"></i> Properties</div>
+                    <div class="about-properties-body">
+                        <div class="prop-row"><span class="prop-key">Location</span><span class="prop-val">Nuremberg, Germany</span></div>
+                        <div class="prop-row"><span class="prop-key">Specialization</span><span class="prop-val">PCB Design, Power Electronics</span></div>
+                        <div class="prop-row"><span class="prop-key">Experience</span><span class="prop-val">3+ Years</span></div>
+                        <div class="prop-row"><span class="prop-key">Firmware</span><span class="prop-val">C, C++, Python</span></div>
+                        <div class="prop-row"><span class="prop-key">Primary EDA</span><span class="prop-val">Altium Designer</span></div>
+                        <div class="prop-row"><span class="prop-key">Platforms</span><span class="prop-val">ESP32, STM32, nRF52</span></div>
+                        <div class="prop-row"><span class="prop-key">Languages</span><span class="prop-val">English, German (B1), Urdu</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section-padding skills-section" style="background:var(--bg-grey);">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">Core competencies across the full hardware development lifecycle.</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h3 class="skill-card-title">EDA & Design Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Altium Designer</span>
+                        <span class="skill-tag">Cadence OrCAD</span>
+                        <span class="skill-tag">Allegro</span>
+                        <span class="skill-tag">LTspice</span>
+                        <span class="skill-tag">Proteus</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="skill-card-title">Hardware Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Multi-layer PCB Layout</span>
+                        <span class="skill-tag">Schematic Capture</span>
+                        <span class="skill-tag">Analog & Digital Circuits</span>
+                        <span class="skill-tag">Power Electronics</span>
+                        <span class="skill-tag">Component Selection</span>
+                        <span class="skill-tag">DFM</span>
+                        <span class="skill-tag">Signal Integrity</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="fa-solid fa-wave-square"></i></div>
+                    <h3 class="skill-card-title">Testing & Validation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">EMC/EMI Pre-compliance</span>
+                        <span class="skill-tag">ESD/Surge/EFT (IEC 61000)</span>
+                        <span class="skill-tag">Oscilloscopes</span>
+                        <span class="skill-tag">Spectrum Analyzers</span>
+                        <span class="skill-tag">Near-field Probes</span>
+                        <span class="skill-tag">Hardware Bring-up</span>
+                        <span class="skill-tag">AOI & X-ray</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="skill-card-title">Embedded & Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ESP32 / ESP01</span>
+                        <span class="skill-tag">STM32</span>
+                        <span class="skill-tag">Nordic nRF52</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">C / C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">I2C / SPI / UART</span>
+                        <span class="skill-tag">BLE / Wi-Fi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Fahad Iftikhar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

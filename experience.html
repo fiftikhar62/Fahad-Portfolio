@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Fahad Iftikhar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar--solid" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Fahad Iftikhar</a>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div style="height:var(--nav-height);"></div>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <p class="section-subtitle">A timeline through my professional milestones.</p>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">09/2024 — Present</span>
+                        <h3 class="timeline-role">Working Student — Electronic Hardware Designer</h3>
+                        <p class="timeline-org">Acal BFi, Germany</p>
+                        <ul class="timeline-desc">
+                            <li>Designed analog and digital PCBs in Altium Designer, including schematic capture, multi-layer layout, and datasheet-driven component selection.</li>
+                            <li>Applied PCB layout best practices for signal integrity, power distribution, and EMC, supported by hands-on EMI/EMC pre-compliance testing and debugging.</li>
+                            <li>Performed hardware bring-up and validation using lab instruments (oscilloscope, power supplies, spectrum analyzer), with a hands-on approach to rapid prototyping and iterative improvement.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">12/2023 — 05/2024</span>
+                        <h3 class="timeline-role">Hardware Development Intern</h3>
+                        <p class="timeline-org">B/S/H/ Hausgerate GmbH, Germany</p>
+                        <ul class="timeline-desc">
+                            <li>Designed a PID-controlled AC heating system using phase-angle control with zero-crossing detection, translating thermal requirements into a verifiable hardware specification.</li>
+                            <li>Prototyped on Veroboard, then transitioned to a 4-layer Altium PCB with focus on signal integrity and PT500 sensor accuracy.</li>
+                            <li>Integrated LabVIEW for real-time monitoring and 50ms data logging; validated waveforms and thermal stability with oscilloscope and bench instrumentation.</li>
+                            <li>Applied DFM principles during layout review to ensure first-pass manufacturability without specialized tooling.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">07/2023 — 12/2023</span>
+                        <h3 class="timeline-role">Student Research Assistant (HIWI)</h3>
+                        <p class="timeline-org">FAPS, FAU Erlangen-Nurnberg, Germany</p>
+                        <ul class="timeline-desc">
+                            <li>Integrated a Siemens SENTRON PAC4200 power meter with a Solderstar Reflow Profiler to log real-time energy consumption across all reflow zones, enabling data-driven process optimization.</li>
+                            <li>Tuned soldering profiles by adjusting ramp rates and dwell times in Solderstar software to meet IPC-compliant joint quality while reducing zone energy usage.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">07/2021 — 10/2022</span>
+                        <h3 class="timeline-role">Junior Embedded Electronics Engineer</h3>
+                        <p class="timeline-org">AMS Power International Pvt Ltd, Pakistan</p>
+                        <ul class="timeline-desc">
+                            <li>Designed PCB layouts in Altium and PSpice for automotive and industrial applications, optimizing trace routing and component placement for EMC performance and long-term reliability.</li>
+                            <li>Developed C/C++ firmware for ESP32, STM32, and nRF52 platforms, implementing sensor integration and communication over I2C, SPI, UART, BLE, and Wi-Fi.</li>
+                            <li>Performed SMD/THT soldering, hot-air rework, and systematic hardware debugging; conducted ESD and EMC pre-compliance checks on finished assemblies.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section-padding" style="background:var(--bg-grey);">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">Academic foundation in electrical engineering and electromobility.</p>
+
+            <div class="education-card">
+                <h3 class="education-degree">MSc in Electromobility (ACES) — Electric Powertrain</h3>
+                <p class="education-school">FAU Erlangen-Nurnberg, Germany</p>
+                <p class="education-date">10/2022 — Present</p>
+                <p class="education-thesis">Thesis: Data-Driven Quality Prediction in SMT Assembly using Machine Learning (custom PCB + ML regression models)</p>
+            </div>
+
+            <div class="education-card">
+                <h3 class="education-degree">BSc in Electrical Engineering — Electronics</h3>
+                <p class="education-school">University of Management and Technology, Pakistan</p>
+                <p class="education-date">10/2017 — 08/2021</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Fahad Iftikhar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
