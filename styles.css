@@ -656,6 +656,35 @@ img { max-width: 100%; height: auto; }
     box-shadow: var(--shadow-md);
 }
 
+.education-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.education-logo-link {
+    flex-shrink: 0;
+}
+
+.education-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #fff;
+    padding: 4px;
+    border: 1px solid var(--border);
+}
+
+.education-school a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.education-school a:hover {
+    text-decoration: underline;
+}
+
 .education-degree {
     font-size: 1.1rem;
     font-weight: 700;
