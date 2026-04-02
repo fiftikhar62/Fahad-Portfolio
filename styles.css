@@ -845,16 +845,21 @@ img { max-width: 100%; height: auto; }
     100% { transform: rotateY(360deg); }
 }
 
+.project-card:has(.pcb-showcase) {
+    overflow: visible;
+}
+
 .pcb-showcase {
     width: 100%;
     height: 240px;
     perspective: 1000px;
     background: linear-gradient(135deg, #e8ecf0 0%, #d5dbe3 100%);
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: grab;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
 }
 
 .pcb-flipper {
