@@ -530,6 +530,24 @@ img { max-width: 100%; height: auto; }
     transform: translateY(-1px);
 }
 
+.skill-tag--logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.skill-tag--logo img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.skill-tag--logo:hover img {
+    filter: brightness(0) invert(1);
+}
+
 .skills-circuit-trace {
     position: absolute;
     inset: 0;
