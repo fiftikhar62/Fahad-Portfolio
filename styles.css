@@ -339,8 +339,15 @@ img { max-width: 100%; height: auto; }
    4. ABOUT
    ============================================================ */
 
+.about-grid-3 {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+}
+
 .about-photos {
-    margin-bottom: 48px;
+    /* no extra margin needed inside grid */
 }
 
 .about-slideshow {
@@ -1170,7 +1177,7 @@ html {
         width: 290px;
     }
 
-    .about-grid {
+    .about-grid-3 {
         grid-template-columns: 1fr;
         gap: 32px;
     }
