@@ -86,6 +86,24 @@
         });
     }
 
+    // --- Research carousel auto-rotate ---
+    var carousel = document.querySelector('.research-carousel');
+    if (carousel) {
+        var slides = carousel.querySelectorAll('.research-slide');
+        var current = 0;
+        setInterval(function () {
+            var prev = current;
+            current = (current + 1) % slides.length;
+            slides[prev].classList.remove('research-slide--active');
+            slides[prev].classList.add('research-slide--exit');
+            slides[current].classList.add('research-slide--active');
+            slides[current].classList.remove('research-slide--exit');
+            setTimeout(function () {
+                slides[prev].classList.remove('research-slide--exit');
+            }, 800);
+        }, 3000);
+    }
+
     // --- Parallax-lite on hero slideshow ---
     var slideshow = document.querySelector('.hero-slideshow');
     if (slideshow) {
