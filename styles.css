@@ -834,7 +834,76 @@ img { max-width: 100%; height: auto; }
 }
 
 /* ============================================================
-   12. SCROLL REVEAL ANIMATIONS
+   12. 3D PCB SHOWCASE — ROTATING FLIP CARD
+   ============================================================ */
+
+@keyframes pcbRotate {
+    0%   { transform: rotateY(0deg); }
+    40%  { transform: rotateY(0deg); }
+    50%  { transform: rotateY(180deg); }
+    90%  { transform: rotateY(180deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.pcb-showcase {
+    width: 100%;
+    height: 240px;
+    perspective: 1000px;
+    background: linear-gradient(135deg, #e8ecf0 0%, #d5dbe3 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+
+.pcb-flipper {
+    width: 280px;
+    height: 220px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: pcbRotate 8s ease-in-out infinite;
+    transition: transform 0.1s;
+}
+
+.pcb-showcase:hover .pcb-flipper {
+    animation-play-state: paused;
+}
+
+.pcb-flip-front,
+.pcb-flip-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.pcb-flip-front img,
+.pcb-flip-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pcb-flip-back {
+    transform: rotateY(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pcb-showcase {
+        height: 200px;
+    }
+    .pcb-flipper {
+        width: 230px;
+        height: 180px;
+    }
+}
+
+/* ============================================================
+   13. SCROLL REVEAL ANIMATIONS
    ============================================================ */
 
 /* Base reveal — fade up */
