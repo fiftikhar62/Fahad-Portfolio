@@ -86,6 +86,29 @@
         });
     }
 
+    // --- About section photo slideshow ---
+    var aboutSlides = document.querySelectorAll('.about-slide');
+    var aboutDots = document.querySelectorAll('.about-dot');
+    if (aboutSlides.length) {
+        var aboutCurrent = 0;
+        setInterval(function () {
+            aboutSlides[aboutCurrent].classList.remove('about-slide--active');
+            aboutDots[aboutCurrent].classList.remove('about-dot--active');
+            aboutCurrent = (aboutCurrent + 1) % aboutSlides.length;
+            aboutSlides[aboutCurrent].classList.add('about-slide--active');
+            aboutDots[aboutCurrent].classList.add('about-dot--active');
+        }, 3500);
+        aboutDots.forEach(function (dot, i) {
+            dot.addEventListener('click', function () {
+                aboutSlides[aboutCurrent].classList.remove('about-slide--active');
+                aboutDots[aboutCurrent].classList.remove('about-dot--active');
+                aboutCurrent = i;
+                aboutSlides[aboutCurrent].classList.add('about-slide--active');
+                aboutDots[aboutCurrent].classList.add('about-dot--active');
+            });
+        });
+    }
+
     // --- Research carousel auto-rotate ---
     var carousel = document.querySelector('.research-carousel');
     if (carousel) {
