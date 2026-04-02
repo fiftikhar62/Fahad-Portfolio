@@ -631,6 +631,24 @@ img { max-width: 100%; height: auto; }
     margin-bottom: 12px;
 }
 
+.timeline-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.timeline-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #fff;
+    padding: 4px;
+    flex-shrink: 0;
+}
+
 .timeline-desc {
     list-style: none;
     padding: 0;
