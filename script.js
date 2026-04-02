@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    // --- Navbar scroll transition (only on homepage with hero) ---
+    // --- Navbar scroll transition (transparent → solid) ---
     var navbar = document.getElementById('navbar');
     var hero = document.getElementById('hero');
 
@@ -30,7 +30,6 @@
             navLinks.classList.toggle('open');
         });
 
-        // Close mobile nav on link click
         navLinks.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 hamburger.classList.remove('open');
@@ -39,21 +38,63 @@
         });
     }
 
-    // --- Fade-in on scroll ---
-    var fadeSections = document.querySelectorAll('.fade-section');
-    if (fadeSections.length) {
-        var fadeObserver = new IntersectionObserver(
+    // --- Scroll reveal animations ---
+    var reveals = document.querySelectorAll('.reveal');
+
+    if (reveals.length) {
+        var revealObserver = new IntersectionObserver(
             function (entries) {
                 entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
                     }
                 });
             },
-            { threshold: 0.08 }
+            { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
         );
-        fadeSections.forEach(function (section) {
-            fadeObserver.observe(section);
+
+        reveals.forEach(function (el) {
+            revealObserver.observe(el);
         });
     }
+
+    // --- Active nav link highlighting on scroll ---
+    var sections = document.querySelectorAll('section[id]');
+    var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    if (sections.length && navAnchors.length) {
+        var activeObserver = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        var id = entry.target.getAttribute('id');
+                        navAnchors.forEach(function (a) {
+                            a.classList.remove('active');
+                            if (a.getAttribute('href') === '#' + id) {
+                                a.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            },
+            { threshold: 0.2, rootMargin: '-64px 0px -40% 0px' }
+        );
+
+        sections.forEach(function (s) {
+            activeObserver.observe(s);
+        });
+    }
+
+    // --- Parallax-lite on hero slideshow ---
+    var slideshow = document.querySelector('.hero-slideshow');
+    if (slideshow) {
+        window.addEventListener('scroll', function () {
+            var y = window.scrollY;
+            if (y < window.innerHeight) {
+                slideshow.style.transform = 'translateY(' + (y * 0.3) + 'px)';
+            }
+        });
+    }
+
 })();

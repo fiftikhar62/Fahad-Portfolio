@@ -834,18 +834,109 @@ img { max-width: 100%; height: auto; }
 }
 
 /* ============================================================
-   12. FADE-IN ANIMATION
+   12. SCROLL REVEAL ANIMATIONS
    ============================================================ */
 
-.fade-section {
+/* Base reveal — fade up */
+.reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.fade-section.visible {
+.reveal.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Slide from left */
+.reveal-left {
+    transform: translateX(-60px) translateY(0);
+}
+
+/* Slide from right */
+.reveal-right {
+    transform: translateX(60px) translateY(0);
+}
+
+/* Scale up */
+.reveal-up {
+    transform: translateY(50px) scale(0.96);
+}
+
+/* Delay variants */
+.reveal-d1 { transition-delay: 0.12s; }
+.reveal-d2 { transition-delay: 0.24s; }
+.reveal-d3 { transition-delay: 0.36s; }
+
+/* Staggered children in grids */
+.skills-grid .skill-card:nth-child(1) { transition-delay: 0s; }
+.skills-grid .skill-card:nth-child(2) { transition-delay: 0.12s; }
+.skills-grid .skill-card:nth-child(3) { transition-delay: 0.24s; }
+.skills-grid .skill-card:nth-child(4) { transition-delay: 0.36s; }
+
+/* Timeline card hover lift */
+.timeline-card {
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.timeline-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(6px);
+}
+
+/* Project card tilt on hover */
+.project-card {
+    transition: box-shadow 0.4s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
+    border-top: 3px solid var(--primary);
+}
+
+/* Skill tag pop-in */
+.skill-tag {
+    transition: background 0.25s, color 0.25s, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s;
+}
+.skill-tag:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 4px 12px rgba(26,58,107,0.25);
+}
+
+/* Smooth section scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Active nav link underline animation */
+.nav-links a {
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.navbar--solid .nav-links a.active::after,
+.navbar--solid .nav-links a:hover::after {
+    width: 60%;
+    left: 20%;
+}
+.navbar--transparent .nav-links a::after {
+    background: #ffffff;
+}
+.navbar--transparent .nav-links a.active::after,
+.navbar--transparent .nav-links a:hover::after {
+    width: 60%;
+    left: 20%;
 }
 
 /* ============================================================
